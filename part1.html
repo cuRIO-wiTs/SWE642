@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body, h1,h2,h3,h4,h5,h6 {
+  font-family: "Times New Roman", Times, serif;
+}
+.w3-row-padding img {margin-bottom: 12px}
+.bgimg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('https://bhuvana-hw1.s3.amazonaws.com/b.jpeg');
+  min-height: 100vh; /* Full viewport height */
+  width: 100%;
+  object-fit: cover; /* Ensures it fills the container without distortion */
+}
+
+
+.large-font {
+  font-size: 1.5em; /* Adjust this size as needed */
+}
+.portfolio-content {
+  text-align: justify; /* Justify text in portfolio section */
+}
+.portfolio-heading {
+  font-size: 2.5em; /* Larger font size for Portfolio heading */
+}
+.contact-heading {
+  font-size: 2.5em; /* Larger font size for Contact Me heading */
+}
+
+@media (max-width: 768px) {
+  .w3-sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  
+  .bgimg {
+    min-height: 50vh; /* Reduced height for mobile screens */
+  }
+}
+</style>
+</head>
+<body>
+<!-- Sidebar with image -->
+<nav class="w3-sidebar w3-hide-medium w3-hide-small" style="width:40%">
+  <div class="bgimg"></div>
+</nav>
+
+<!-- Hidden Sidebar (reveals when clicked on menu icon)-->
+<nav class="w3-sidebar w3-black w3-animate-right w3-xxlarge" style="display:none;padding-top:150px;right:0;z-index:2" id="mySidebar">
+  <a href="javascript:void(0)" onclick="closeNav()" class="w3-button w3-black w3-xxxlarge w3-display-topright" style="padding:0 12px;">
+    <i class="fa fa-remove"></i>
+  </a>
+  <div class="w3-bar-block w3-center">
+    <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Home</a>
+    <a href="#portfolio" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Portfolio</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Contact</a>
+  </div>
+</nav>
+
+<!-- Page Content -->
+<div class="w3-main w3-padding-large" style="margin-left:40%">
+
+  <!-- Menu icon to open sidebar -->
+  <span class="w3-button w3-top w3-white w3-xxlarge w3-text-grey w3-hover-text-black" style="width:auto;right:0;" onclick="openNav()"><i class="fa fa-bars"></i></span>
+
+  <!-- Header -->
+  <header class="w3-container w3-center" style="padding:128px 16px" id="home">
+  <h1 class="w3-jumbo" style="line-height: 1.8;"><b>I'm</b></h1>
+  <h1 class="w3-jumbo" style="line-height: 1.8;"><b>Bhuvana Venigalla</b></h1>
+  <h5 style="font-size:60px; line-height: 2.4;">SWE642</h5>
+  <h5 style="font-size:60px; line-height: 1.4;">Assignment 1</h5>
+  <img src="https://bhuvana-hw1.s3.amazonaws.com/b.jpeg" class="w3-image w3-hide-large w3-hide-small w3-round" style="display:block;width:60%;margin:auto;">
+  <img src="https://bhuvana-hw1.s3.amazonaws.com/b.jpeg" class="w3-image w3-hide-large w3-hide-medium w3-round" style="width:100%;height:auto;">
+
+</header>
+
+  <!-- Portfolio Section -->
+  <div class="w3-padding-32 w3-content" id="portfolio">
+    <h2 class="w3-text-black portfolio-heading">My Portfolio</h2> <!-- Increased font size here -->
+
+    <!-- Grid for photos -->
+    <hr class="w3-opacity">
+    <p class="portfolio-content large-font">I am Bhuvana, currently pursuing my Master’s degree in Computer Science at George Mason University. As part of my advanced coursework, I’ve taken SWE 642, which aligns with my passion for full-stack development. My preferred programming languages are Python, the MERN stack (MongoDB, Express, React, Node.js), HTML, CSS, and C.
+
+    <p class="portfolio-content large-font">During my academic journey, I’ve worked on several exciting projects that showcase my technical skills:
+
+    <ul class="portfolio-content large-font">
+      <li><b>Online Voting Portal:</b> A secure platform I developed to facilitate online voting, ensuring a smooth and efficient process for users.</li>
+      <li><b>Twitter Sentiment Analysis:</b> This project involved analyzing sentiments expressed in tweets, using techniques in natural language processing and machine learning.</li>
+      <li><b>Classification Using Micro-Array Data:</b> I applied classification algorithms to micro-array data, focusing on insights that could be useful in bioinformatics or healthcare.</li>
+      <li><b>Note Zone:</b> I built this platform as a tool to help users efficiently manage and organize their notes.
+      My experiences in both data science and full-stack development allow me to tackle complex challenges, and I’m eager to continue growing in these fields.</li>
+    </ul></p>
+        </p>
+    
+  <!-- End Portfolio Section -->
+  </div>
+
+  <div class="w3-padding-32 w3-content" id="contact" style="background-color: white; margin-bottom:64px">
+    <h2 class="contact-heading">Contact Me</h2> <!-- Increased font size here -->
+    <hr class="w3-opacity">
+
+    <div class="w3-section large-font"> <!-- Increased font size here -->
+        <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Virginia, VA</p>
+        <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +1234567890</p>
+        <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: bvenigal@gmu.edu</p>
+    </div>
+
+    <p class="large-font">Let's get in touch. Send me a message:</p> <!-- Increased font size here -->
+    <form action="/action_page.php" target="_blank">
+        <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
+        <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Email" required name="Email"></p>
+        <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Subject" required name="Subject"></p>
+        <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message" required name="Message"></p>
+        <p>
+            <button class="w3-button w3-light-grey w3-padding-large" type="submit">
+                <i class="fa fa-paper-plane"></i> SEND MESSAGE
+            </button>
+        </p>
+    </form>
+<!-- End Contact Section -->
+</div>  
+
+
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin:-24px">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+    <p class="w3-medium"><a href="http://3.83.31.26/dept.html" class="w3-hover-text-green">Click here for CS Department Page</a></p>
+  <!-- End footer -->
+  </footer>
+  
+<!-- END PAGE CONTENT -->
+</div>
+
+<script>
+// Open and close sidebar
+function openNav() {
+  document.getElementById("mySidebar").style.width = "60%";
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
+</body>
+</html>
